@@ -1,0 +1,4 @@
+# Arquivos internos da API: nunca acessíveis diretamente pelo navegador
+<FilesMatch "^(bootstrap|config|config\.exemplo)\.php$">
+  Require all denied
+</FilesMatch>

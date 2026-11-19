@@ -1,0 +1,163 @@
+{
+  "empresa": "KL Rent a Car",
+  "atualizado_em": "2026",
+  "raiz": {
+    "id": "diretoria",
+    "cargo": "DIRETORIA",
+    "colaboradores": [],
+    "filhos": [
+      {
+        "id": "juridico",
+        "cargo": "JURÍDICO",
+        "colaboradores": ["Carem"],
+        "filhos": []
+      },
+      {
+        "id": "licitacao",
+        "cargo": "LICITAÇÃO",
+        "colaboradores": ["Francisco"],
+        "filhos": [
+          { "id": "licitacao-gestao-contratos", "cargo": "Gestão de Contratos", "colaboradores": ["Dayshely"], "filhos": [] },
+          { "id": "licitacao-faturamento", "cargo": "Faturamento", "colaboradores": ["Marcos"], "filhos": [] },
+          { "id": "licitacao-comissao", "cargo": "Comissão de Licitação", "colaboradores": ["Emily"], "filhos": [] },
+          { "id": "licitacao-gestao-multas", "cargo": "Gestão de Multas", "colaboradores": [], "filhos": [] }
+        ]
+      },
+      {
+        "id": "ti",
+        "cargo": "TI",
+        "colaboradores": ["Davi", "Marcos"],
+        "filhos": [
+          { "id": "ti-programacao", "cargo": "Programação", "colaboradores": [], "filhos": [] },
+          { "id": "ti-suporte", "cargo": "Suporte Técnico", "colaboradores": [], "filhos": [] }
+        ]
+      },
+      {
+        "id": "administrativo",
+        "cargo": "ADMINISTRATIVO",
+        "colaboradores": [],
+        "filhos": [
+          {
+            "id": "financeiro",
+            "cargo": "FINANCEIRO",
+            "colaboradores": ["Larissa", "Letícia", "Midory"],
+            "filhos": [
+              { "id": "financeiro-contas-pagar", "cargo": "Contas a Pagar", "colaboradores": [], "filhos": [] },
+              { "id": "financeiro-contas-receber", "cargo": "Contas a Receber", "colaboradores": [], "filhos": [] },
+              { "id": "financeiro-conciliacao", "cargo": "Conciliação Bancária", "colaboradores": [], "filhos": [] }
+            ]
+          },
+          {
+            "id": "multa",
+            "cargo": "MULTA",
+            "colaboradores": ["Kayla", "Eduarda", "Sheila", "Amine"],
+            "filhos": [
+              { "id": "multa-gestao", "cargo": "Gestão de Multas", "colaboradores": [], "filhos": [] },
+              { "id": "multa-emplacamento", "cargo": "Emplacamento / Licenciamento", "colaboradores": [], "filhos": [] }
+            ]
+          },
+          {
+            "id": "dp-rh",
+            "cargo": "DP / RH",
+            "colaboradores": ["Alexandra", "Rafaela"],
+            "filhos": []
+          },
+          {
+            "id": "contabilidade",
+            "cargo": "CONTABILIDADE",
+            "colaboradores": ["Leila"],
+            "filhos": []
+          }
+        ]
+      },
+      {
+        "id": "manutencao",
+        "cargo": "MANUTENÇÃO",
+        "colaboradores": ["Cristiano", "André"],
+        "filhos": [
+          { "id": "oficina", "cargo": "OFICINA", "colaboradores": ["Sr. Carlos"], "filhos": [] },
+          { "id": "estoque-manutencao", "cargo": "ESTOQUE", "colaboradores": ["Nicole", "Jorge"], "filhos": [] },
+          { "id": "compras", "cargo": "COMPRAS", "colaboradores": ["Joni", "Andreo"], "filhos": [] },
+          { "id": "logistica", "cargo": "LOGÍSTICA", "colaboradores": ["André"], "filhos": [] }
+        ]
+      },
+      {
+        "id": "kl-freedom",
+        "cargo": "KL FREEDOM",
+        "colaboradores": [],
+        "filhos": []
+      },
+      {
+        "id": "lojas",
+        "cargo": "LOJAS",
+        "colaboradores": ["Leila", "Katiucy"],
+        "filhos": [
+          {
+            "id": "amazonas",
+            "cargo": "AMAZONAS",
+            "colaboradores": ["Katiucy"],
+            "filhos": [
+              {
+                "id": "kl-praca-14",
+                "cargo": "KL PRAÇA 14",
+                "colaboradores": ["Felicia"],
+                "filhos": [
+                  { "id": "praca14-atendimento", "cargo": "Atendimento", "colaboradores": [], "filhos": [] },
+                  { "id": "praca14-checklist", "cargo": "CheckList", "colaboradores": [], "filhos": [] },
+                  { "id": "praca14-cancela", "cargo": "Cancela", "colaboradores": [], "filhos": [] },
+                  { "id": "praca14-lavagem", "cargo": "Lavagem", "colaboradores": [], "filhos": [] }
+                ]
+              },
+              {
+                "id": "kl-torquato",
+                "cargo": "KL TORQUATO",
+                "colaboradores": ["Luciana"],
+                "filhos": [
+                  { "id": "torquato-atendimento", "cargo": "Atendimento", "colaboradores": [], "filhos": [] },
+                  { "id": "torquato-checklist", "cargo": "CheckList", "colaboradores": [], "filhos": [] },
+                  { "id": "torquato-cancela", "cargo": "Cancela", "colaboradores": [], "filhos": [] },
+                  { "id": "torquato-lavagem", "cargo": "Lavagem", "colaboradores": [], "filhos": [] },
+                  { "id": "torquato-polimento", "cargo": "Polimento", "colaboradores": [], "filhos": [] },
+                  { "id": "torquato-higienizacao", "cargo": "Higienização", "colaboradores": [], "filhos": [] }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "kl-boa-vista",
+            "cargo": "KL BOA VISTA",
+            "colaboradores": ["Wendell", "Katlyn"],
+            "filhos": [
+              { "id": "boavista-atendimento", "cargo": "Atendimento", "colaboradores": [], "filhos": [] },
+              { "id": "boavista-checklist", "cargo": "CheckList", "colaboradores": [], "filhos": [] },
+              { "id": "boavista-lavagem", "cargo": "Lavagem", "colaboradores": [], "filhos": [] },
+              { "id": "boavista-estoque", "cargo": "Estoque", "colaboradores": [], "filhos": [] },
+              { "id": "boavista-mecanica", "cargo": "Mecânica", "colaboradores": [], "filhos": [] }
+            ]
+          },
+          {
+            "id": "lojas-estados",
+            "cargo": "LOJAS ESTADOS",
+            "colaboradores": [],
+            "filhos": [
+              { "id": "loja-maranhao", "cargo": "MARANHÃO", "colaboradores": ["Marcelo"], "filhos": [] },
+              { "id": "loja-para", "cargo": "PARÁ", "colaboradores": ["Mauricelio", "Walmon"], "filhos": [] },
+              { "id": "loja-amapa", "cargo": "AMAPÁ", "colaboradores": ["Marcio"], "filhos": [] },
+              { "id": "loja-fortaleza", "cargo": "FORTALEZA (CE)", "colaboradores": ["Ítalo"], "filhos": [] },
+              { "id": "loja-tocantins", "cargo": "TOCANTINS", "colaboradores": ["José", "Hiago"], "filhos": [] },
+              { "id": "loja-natal", "cargo": "NATAL (RN)", "colaboradores": [], "filhos": [] },
+              { "id": "loja-rio-branco", "cargo": "RIO BRANCO (AC)", "colaboradores": [], "filhos": [] },
+              { "id": "loja-piaui", "cargo": "PIAUÍ", "colaboradores": [], "filhos": [] },
+              { "id": "loja-rondonia", "cargo": "RONDÔNIA", "colaboradores": [], "filhos": [] },
+              { "id": "loja-bahia", "cargo": "BAHIA", "colaboradores": [], "filhos": [] },
+              { "id": "loja-espirito-santo", "cargo": "ESPÍRITO SANTO", "colaboradores": [], "filhos": [] },
+              { "id": "loja-paraiba", "cargo": "PARAÍBA", "colaboradores": [], "filhos": [] },
+              { "id": "loja-santa-catarina", "cargo": "SANTA CATARINA", "colaboradores": [], "filhos": [] },
+              { "id": "loja-mato-grosso-sul", "cargo": "MATO GROSSO DO SUL", "colaboradores": [], "filhos": [] }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

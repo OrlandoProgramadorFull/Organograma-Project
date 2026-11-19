@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>KL Rent a Car — Organograma 2026</title>
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body class="is-loading">
+
+<section id="login-screen" class="login-screen hidden" aria-label="Entrar no sistema">
+  <form id="login-form" class="login-card" autocomplete="on">
+    <div class="login-brand">KL RENT A CAR <span>Organograma 2026</span></div>
+    <p id="login-message" class="login-message hidden"></p>
+    <div id="login-fields">
+      <label for="login-user">Usuário</label>
+      <input type="text" id="login-user" name="username" autocomplete="username" autocapitalize="none" required>
+      <label for="login-pass">Senha</label>
+      <input type="password" id="login-pass" name="password" autocomplete="current-password" required>
+      <button type="submit" id="login-submit" class="btn btn-primary">Entrar</button>
+      <button type="button" id="login-cancel" class="login-cancel hidden">Voltar para a visualização</button>
+    </div>
+  </form>
+</section>
+
+<header class="app-header">
+  <div class="frieze frieze-top"></div>
+  <div class="header-content">
+    <div class="header-left">
+      <h1>KL RENT A CAR <span class="header-sub">Organograma 2026</span></h1>
+      <div class="summary-cards" aria-label="Resumo do organograma">
+        <div class="stat-card">
+          <span class="stat-value" id="stat-colab">0</span>
+          <span class="stat-label">Colaboradores ativos</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="stat-vagas">0</span>
+          <span class="stat-label">Vagas em aberto</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value" id="stat-areas">0</span>
+          <span class="stat-label">Áreas / departamentos</span>
+        </div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span id="user-chip" class="user-chip" data-requires="login"></span>
+      <button id="btn-history" class="btn btn-ghost" type="button" data-requires="login">Histórico</button>
+      <button id="btn-users" class="btn btn-ghost" type="button" data-requires="admin">Usuários</button>
+      <button id="btn-export" class="btn btn-ghost" type="button" data-requires="login">Exportar dados</button>
+      <button id="btn-import" class="btn btn-ghost" type="button" data-requires="editor">Importar dados</button>
+      <input type="file" id="file-import" accept="application/json,.json" hidden>
+      <button id="btn-password" class="btn btn-ghost" type="button" data-requires="login">Minha senha</button>
+      <button id="btn-logout" class="btn btn-ghost" type="button" data-requires="login">Sair</button>
+      <button id="btn-login" class="btn btn-ghost" type="button" data-requires="guest">Entrar</button>
+    </div>
+  </div>
+  <div class="frieze frieze-bottom"></div>
+</header>
+
+<section class="toolbar">
+  <div class="search-wrap">
+    <input type="search" id="search-input" placeholder="Buscar colaborador ou cargo/área..." autocomplete="off">
+    <span class="search-count" id="search-count"></span>
+  </div>
+  <span id="save-status" class="save-status" aria-live="polite"></span>
+  <div class="zoom-controls" role="group" aria-label="Zoom do organograma">
+    <button id="zoom-out" class="btn btn-icon" type="button" title="Diminuir zoom">−</button>
+    <button id="zoom-reset" class="btn btn-icon zoom-label" type="button" title="Redefinir zoom">100%</button>
+    <button id="zoom-in" class="btn btn-icon" type="button" title="Aumentar zoom">+</button>
+  </div>
+</section>
+
+<main id="canvas-viewport">
+  <div id="canvas-pan">
+    <div id="canvas-zoom">
+      <ul class="tree" id="tree-root"></ul>
+    </div>
+  </div>
+  <div class="canvas-hint">Arraste para navegar · use os botões de zoom para aproximar/afastar</div>
+</main>
+
+<div id="modal-overlay" class="modal-overlay hidden">
+  <div class="modal" role="dialog" aria-modal="true">
+    <h2 id="modal-title"></h2>
+    <div id="modal-body"></div>
+    <p id="modal-warning" class="modal-warning hidden"></p>
+    <div class="modal-actions">
+      <button id="modal-cancel" class="btn btn-ghost" type="button">Cancelar</button>
+      <button id="modal-confirm" class="btn btn-primary" type="button">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<footer class="app-footer">
+  <div class="frieze frieze-thin"></div>
+  <span>KL Rent a Car &middot; Organograma interativo &middot; dados salvos no servidor</span>
+</footer>
+
+<script src="vendor/html2canvas.min.js"></script>
+<script src="vendor/jszip.min.js"></script>
+<script src="script.js?v=3"></script>
+</body>
+</html>

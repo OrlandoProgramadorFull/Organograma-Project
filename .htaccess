@@ -1,0 +1,28 @@
+# Organograma KL Rent a Car — configuração do Apache (HostGator)
+
+Options -Indexes
+DirectoryIndex index.html
+
+# Força HTTPS (o SSL gratuito da HostGator precisa estar ativo no domínio)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Bloqueia arquivos que não devem ser baixados por ninguém
+<FilesMatch "\.(md|bat|sqlite|sql|log|ini|zip)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "same-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  # Sempre confere se há versão nova do app (evita cache velho após atualizar)
+  <FilesMatch "\.(html|js|css)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

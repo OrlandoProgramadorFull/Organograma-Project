@@ -1,0 +1,11 @@
+# Configuração com a senha do banco (gerada pelo install.php)
+api/config.php
+
+# Banco de testes local
+dados/*.sqlite
+dados/*.sqlite-*
+
+# Pacote gerado para a HostGator
+*.zip
+
+*.log
